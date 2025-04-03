@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let randomNr = Math.floor(Math.random() * 10)+1;
-        console.log(randomNr);
-        let guess;
-        do {
-        guess = prompt("Guess number 1-10");
-        if (randomNr > guess) 
-        {
-        alert("You guessed too low");
-        } 
-        else if (randomNr < guess)
-        {
-        alert("Guess was too high");
+      let a = Math.random() * 100;
+      let guessnum = Math.round(a);
+      let c;
+      let count=0;
+      let score;
+      while (guessnum != c) {
+        c = Number.parseInt(prompt("Enter the Number"));
+         count++;
+        if (c > guessnum) {
+          alert("You Enter number is greater than original number");
+        } else if (c < guessnum) {
+          alert("You Enter number is lesser than original number");
         }
-        else if (randomNr==guess)
-        {
-        alert("You won")
-        }
-        } while (guess !== randomNr)
+      }
+      score = 100 - count;
+      alert("You Win And Your Score is " + score);
     </script>
-</body>
+  </body>
 </html>
